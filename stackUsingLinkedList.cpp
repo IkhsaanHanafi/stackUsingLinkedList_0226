@@ -73,7 +73,7 @@ public:
 
 int main()
 {
-    Stack stack;
+    Stack stact;
 
     int choice = 0;
     int value;
@@ -92,12 +92,28 @@ int main()
             case 1:
                 cout << "Enter the value to push : ";
                 cin >> value;
-                Stact.push(value);
+                stact.push(value);
                 break;
             case 2:
-                if (!stack.isEmpty())
+                if (!stact.isEmpty())
                 {
-                    Stact.pop();
+                    stact.pop();
+                }
+                else
+                {
+                    cout << "Stact is Empty. Cannot pop."
+                    << endl;
+                }
+                break;
+            case 3:
+                if (!stact.isEmpty())
+                {
+                    stact.peek();
+                }
+                else
+                {
+                    cout << "Stact is Empty. No top value."
+                    << endl;
                 }
         }
     }
